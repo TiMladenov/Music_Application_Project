@@ -30,7 +30,7 @@
             android:label="@string/title_playlists" />
         <activity
             android:name=".SongsActivity"
-            android:label="@string/title_songs"></activity>
+            android:label="@string/title_songs"/>
     </application>
 
 </manifest>
