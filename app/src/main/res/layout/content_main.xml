@@ -1,43 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center_horizontal"
+    android:background="@android:color/darker_gray"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="io.github.timladenov.musicapplication.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:background="@android:color/white">
+
+        <Button
+            android:id="@+id/play_button"
+            style="@style/PlayerButtonStyle"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_state_selector" />
+
+        <Button
+            android:id="@+id/pause_button"
+            style="@style/PlayerButtonStyle"
+            android:layout_toLeftOf="@id/play_button"
+            android:layout_toStartOf="@id/play_button"
+            android:background="@drawable/button_state_selector_pause" />
+
+        <Button
+            android:id="@+id/stop_button"
+            style="@style/PlayerButtonStyle"
+            android:layout_toRightOf="@id/play_button"
+            android:layout_toEndOf="@id/play_button"
+            android:background="@drawable/button_state_selector_stop" />
+
+        <Button
+            android:id="@+id/next_button"
+            style="@style/PlayerButtonStyle"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/button_state_selector_next" />
+
+        <Button
+            android:id="@+id/previous_button"
+            style="@style/PlayerButtonStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/button_state_selector_previous" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lining_nav_tabs"
+        android:background="@android:color/black"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
 
         <LinearLayout
-            android:layout_width="368dp"
-            android:layout_height="495dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginEnd="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:background="@android:color/darker_gray"
-                android:text="Popular artists" />
+                style="@style/HomeScreenTextViewTitle"
+                android:text="@string/homescreen_title_pop_artists" />
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
+                android:layout_height="@dimen/item_0dp_width"
+                android:layout_marginTop="@dimen/item_padding_10dp"
+                android:layout_weight="@dimen/item_weight"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -46,71 +84,40 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
-                        android:text="This is home screen"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
-                        android:text="This is home screen2"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
-                        android:text="This is home screen3"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
-                        android:text="This is home screen4"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
-                        android:text="This is home screen5"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
@@ -119,22 +126,14 @@
             </HorizontalScrollView>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginEnd="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:background="@android:color/darker_gray"
-                android:text="Popular albums" />
+                style="@style/HomeScreenTextViewTitle"
+                android:text="@string/homescreen_title_pop_albums" />
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
+                android:layout_height="@dimen/item_0dp_width"
+                android:layout_marginTop="@dimen/item_padding_10dp"
+                android:layout_weight="@dimen/item_weight"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -143,71 +142,40 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
-                        android:text="This is home screen"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
-                        android:text="This is home screen2"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
-                        android:text="This is home screen3"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
-                        android:text="This is home screen4"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
-                        android:text="This is home screen5"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
@@ -216,23 +184,15 @@
             </HorizontalScrollView>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginEnd="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:background="@android:color/darker_gray"
-                android:text="Upcoming albums" />
+                style="@style/HomeScreenTextViewTitle"
+                android:text="@string/homescreen_title_upcoming_albums" />
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="40dp"
-                android:layout_weight="1"
+                android:layout_height="@dimen/item_0dp_width"
+                android:layout_marginBottom="@dimen/item_padding_10dp"
+                android:layout_marginTop="@dimen/item_padding_10dp"
+                android:layout_weight="@dimen/item_weight"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -241,71 +201,40 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
-                        android:text="This is home screen"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
-                        android:text="This is home screen2"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
-                        android:text="This is home screen3"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
-                        android:text="This is home screen4"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:background="@android:color/darker_gray"
+                        style="@style/HomeScreenTextView"
+                        android:text="@string/homescreen_content_interim_text"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
@@ -314,7 +243,6 @@
             </HorizontalScrollView>
 
         </LinearLayout>
+    </ScrollView>
 
-    </android.support.constraint.ConstraintLayout>
-
-</ScrollView>
+</LinearLayout>

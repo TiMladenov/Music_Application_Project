@@ -26,15 +26,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -71,6 +62,7 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast.makeText(this, "Here will be displayed various user and app settings.", Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -86,15 +78,19 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_albums) {
             Intent intent = new Intent(MainActivity.this, AlbumsActivity.class);
             startActivity(intent);
+            finish();
         } else if (id == R.id.nav_artists) {
             Intent intent = new Intent(MainActivity.this, ArtistsActivity.class);
             startActivity(intent);
+            finish();
         } else if (id == R.id.nav_playlists) {
             Intent intent = new Intent(MainActivity.this, PlaylistsActivity.class);
             startActivity(intent);
+            finish();
         } else if (id == R.id.nav_songs) {
             Intent intent = new Intent(MainActivity.this, SongsActivity.class);
             startActivity(intent);
+            finish();
         } else if (id == R.id.nav_contact) {
             String[] receiver = {"mymusicappsupport@abcd.com"};
 
@@ -109,6 +105,7 @@ public class MainActivity extends AppCompatActivity
             } catch (android.content.ActivityNotFoundException exc) {
                 Toast.makeText(MainActivity.this, getResources().getText(R.string.functionality_mail_error).toString(), Toast.LENGTH_SHORT).show();
             }
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

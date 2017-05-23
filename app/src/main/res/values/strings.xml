@@ -3,6 +3,10 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
+    <string name="homescreen_title_pop_artists"><u>Popular artists</u></string>
+    <string name="homescreen_title_pop_albums"><u>Popular albums</u></string>
+    <string name="homescreen_title_upcoming_albums"><u>Upcoming albums</u></string>
+    <string name="homescreen_content_interim_text">Placeholder</string>
     <string name="title_artists">Artists</string>
     <string name="title_albums">Albums</string>
     <string name="title_playlists">Playlists</string>
@@ -12,4 +16,11 @@
     <string name="label_albums">Albums</string>
     <string name="functionality_mail_error">There is no email client installed</string>
     <string name="title_navigation">Application navigation</string>
+    <string name="navigation_drawer_text">Welcome to My Play navigation menu</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_albums">Albums</string>
+    <string name="nav_artists">Artists</string>
+    <string name="nav_playlists">Playlists</string>
+    <string name="nav_songs">Songs</string>
+    <string name="descr_content_1">Image logo of the application.</string>
 </resources>

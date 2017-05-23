@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@android:color/darker_gray"
+    android:orientation="vertical"
     tools:context="io.github.timladenov.musicapplication.PlaylistsActivity">
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#FFFFFF"/>
+        android:layout_height="@dimen/lining_nav_tabs"
+        android:background="@android:color/white" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,96 +18,85 @@
         android:orientation="horizontal">
 
         <View
-            android:layout_width="2dp"
+            android:layout_width="@dimen/lining_nav_tabs"
             android:layout_height="match_parent"
-            android:background="#FFFFFF"/>
+            android:background="@android:color/white" />
 
         <TextView
             android:id="@+id/backToHome"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:paddingStart="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingEnd="10dp"
-            android:layout_height="30dp"
-            android:background="@android:color/black"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:text="Home"
-            android:textColor="@android:color/white"/>
+            style="@style/TextViewStyle"
+            android:text="@string/nav_home" />
 
         <View
-            android:layout_width="2dp"
+            android:layout_width="@dimen/lining_nav_tabs"
             android:layout_height="match_parent"
-            android:background="#FFFFFF"/>
+            android:background="@android:color/white" />
 
 
         <TextView
             android:id="@+id/goToAlbums"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:paddingStart="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingEnd="10dp"
-            android:layout_height="30dp"
-            android:background="@android:color/black"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:text="Albums"
-            android:textColor="@android:color/white"/>
+            style="@style/TextViewStyle"
+            android:text="@string/nav_albums" />
 
         <View
-            android:layout_width="2dp"
+            android:layout_width="@dimen/lining_nav_tabs"
             android:layout_height="match_parent"
-            android:background="#FFFFFF"/>
+            android:background="@android:color/white" />
 
         <TextView
             android:id="@+id/goToArtists"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:paddingStart="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingEnd="10dp"
-            android:layout_height="30dp"
-            android:background="@android:color/black"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:text="Artists"
-            android:textColor="@android:color/white"/>
+            style="@style/TextViewStyle"
+            android:text="@string/nav_artists" />
 
         <View
-            android:layout_width="2dp"
+            android:layout_width="@dimen/lining_nav_tabs"
             android:layout_height="match_parent"
-            android:background="#FFFFFF"/>
+            android:background="@android:color/white" />
 
         <TextView
             android:id="@+id/goToSongs"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:paddingStart="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingEnd="10dp"
-            android:layout_height="30dp"
-            android:background="@android:color/black"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:text="Songs"
-            android:textColor="@android:color/white"/>
+            style="@style/TextViewStyle"
+            android:text="@string/nav_songs" />
 
         <View
-            android:layout_width="2dp"
+            android:layout_width="@dimen/lining_nav_tabs"
             android:layout_height="match_parent"
-            android:background="#FFFFFF"/>
+            android:background="@android:color/white" />
 
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#FFFFFF"/>
+        android:layout_height="@dimen/lining_nav_tabs"
+        android:background="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/item_padding_5dp"
+        android:layout_marginRight="@dimen/item_padding_5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_padding_10dp"
+            android:layout_marginTop="@dimen/item_padding_10dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:paddingBottom="@dimen/item_padding_5dp"
+            android:paddingTop="@dimen/item_padding_5dp"
+            android:text="This activity will present the playlists that the user has created by selected the Add to Playlist button when playing a song. They can be arranged alphabetically or
+            by play time duration.
+
+            Same implementation as Albums:
+            This activity contains links to all other activities in the application. Once any link to
+            other activity is selected, the user will be redirected to it and the current one will cease with finish() method.
+            The navigation menu uses Explicit Intents to do this job, and also the color of the button is changed once selected, to indicate
+            to the user the change of its state. No other methods are available to navigate away from this activity, but the nav menu. The back button is blocked."
+            android:textColor="@android:color/black"
+            android:textStyle="normal" />
+
+    </LinearLayout>
 
 </LinearLayout>

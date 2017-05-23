@@ -5,4 +5,12 @@
     <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="lining_nav_tabs">2dp</dimen>
+    <item name="item_weight" format="float" type="dimen">1</item>
+    <dimen name="item_0dp_width">0dp</dimen>
+    <dimen name="item_padding_10dp">10dp</dimen>
+    <dimen name="item_height_30dp">30dp</dimen>
+    <dimen name="item_height_40dp">40dp</dimen>
+    <dimen name="item_width_120dp">120dp</dimen>
+    <dimen name="item_padding_5dp">5dp</dimen>
 </resources>

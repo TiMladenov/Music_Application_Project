@@ -61,4 +61,9 @@ public class ArtistsActivity extends AppCompatActivity implements View.OnClickLi
                 break;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        ;
+    }
 }

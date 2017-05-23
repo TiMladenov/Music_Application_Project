@@ -61,4 +61,9 @@ public class SongsActivity extends AppCompatActivity implements View.OnClickList
                 break;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        ;
+    }
 }
